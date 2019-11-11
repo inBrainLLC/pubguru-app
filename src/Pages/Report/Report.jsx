@@ -6,9 +6,11 @@ import Overview from '../../Components/Overview/Overview';
 import DataChart from '../../Components/DataChart/DataChart';
 import DetailTable from '../../Components/DetailTable/DetailTable';
 
+import data from './demoData';
+
 class Report extends Component {
   state = {
-    data: data,
+    data,
   }
   
   render() {
