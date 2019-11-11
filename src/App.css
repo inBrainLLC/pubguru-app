@@ -69,6 +69,10 @@ header li .non-uniform-padding h4 {
 /* li a:hover {
   background-color: #111;
 } */
+
+.header-right-menu {
+  float: right;
+}
 /* header styling */
 
 /* sidebar styling */
