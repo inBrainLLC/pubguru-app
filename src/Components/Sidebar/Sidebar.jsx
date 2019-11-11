@@ -11,13 +11,14 @@ class SideBar extends Component {
         <ul>
           <li>
             <span className="uniform-padding">
-              <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon icon={['fas', 'check-box']} />
               Dashboard
             </span>
           </li>
           <li>
             <span className="uniform-padding">
               <FontAwesomeIcon icon={faBars} />
+              
               Notification
             </span>
           </li>
