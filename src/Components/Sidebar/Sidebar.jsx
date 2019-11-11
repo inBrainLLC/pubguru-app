@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 
 // get our fontawesome imports
 import { faBars } from "@fortawesome/free-solid-svg-icons";

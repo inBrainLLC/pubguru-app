@@ -6,10 +6,15 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
+    "antd": "^3.25.1",
+    "babel-plugin-import": "^1.12.2",
     "bootstrap": "^4.3.1",
     "bootstrap-daterangepicker": "^3.0.5",
+    "customize-cra": "^0.8.0",
     "daterangepicker": "^3.0.5",
     "jquery": "^3.4.1",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
@@ -18,8 +23,8 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,8 +40,12 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
+    "node-sass": "^4.13.0",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "react-app-rewire-sass-modules": "^1.1.7",
+    "react-app-rewired": "^2.1.5",
+    "sass-loader": "^8.0.0"
   },
   "browserslist": {
     "production": [

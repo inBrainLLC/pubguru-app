@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import "./App.css";
 import $ from "jquery";
-import daterangepicker from "../node_modules/daterangepicker/daterangepicker.js";
+import daterangepicker from "daterangepicker";
 
 class Calendar extends Component {
   componentDidMount() {
