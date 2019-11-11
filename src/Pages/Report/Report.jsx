@@ -114,8 +114,19 @@ class Report extends Component {
             <DataChart />
             <DetailTable />
             <table border="1">
-          <tbody>{data}</tbody>
-        </table>
+              <thead>
+                <th>Date</th>
+                <th>Total Page Views</th>
+                <th>Estimated Eu Revinew</th>
+                <th>Non Eu Page views</th>
+                <th>Eu Page views</th>
+                <th>Priviously Consented</th>
+                <th>Shown And Consented</th>
+                <th>Shown And non Consented</th>
+                <th>Gdpr Popup Ctr</th>
+              </thead>
+           <tbody>{data}</tbody>
+           </table>
         </div>
     );
   }
