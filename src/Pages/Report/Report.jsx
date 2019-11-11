@@ -115,6 +115,8 @@ class Report extends Component {
             <DetailTable />
             <table border="1">
               <thead>
+              <tr>
+
                 <th>Date</th>
                 <th>Total Page Views</th>
                 <th>Estimated Eu Revinew</th>
@@ -124,6 +126,7 @@ class Report extends Component {
                 <th>Shown And Consented</th>
                 <th>Shown And non Consented</th>
                 <th>Gdpr Popup Ctr</th>
+                </tr>
               </thead>
            <tbody>{data}</tbody>
            </table>
