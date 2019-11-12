@@ -161,6 +161,20 @@ header li .non-uniform-padding h4 {
   float: right;
   margin-left: 10px;
 }
+
+.data-chart {
+  padding: 20px 0px;
+  display: inline-block;
+}
+
+.data-chart .button-dropdown {
+  float: left;
+  margin-right: 20px;
+}
+
+.data-chart span {
+  margin-right: 10px;
+}
 /* report title styling by noor */
 
 /* date range input field */
