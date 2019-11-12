@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { Radio } from 'antd';
+
 
 class DataChart extends Component {
   render() {
     return (
         <div>
-            DataChart
+            <Radio>Radio</Radio>
         </div>
     );
   }
