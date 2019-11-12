@@ -15,7 +15,13 @@ const { Content } = Layout;
 class Report extends Component {
   state = {
     data,
+    selectedProp: 'estimatedEuRevinew',
+    selectedCurrency: 'USD',
   }
+
+  // convertCurrency = () => {
+  //   return 
+  // }
   
   render() {
     return (
@@ -27,7 +33,10 @@ class Report extends Component {
             <Title />
             <Toolbar />
             <Overview />
-            <DataChart />
+            <DataChart
+              data={this.state.data}
+              selectedProp={this.state.selectedProp}
+            />
             <DetailTable
               data={this.state.data}
             />
