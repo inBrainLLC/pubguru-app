@@ -86,6 +86,7 @@ header li .non-uniform-padding h4 {
   width: 80%;
   float: left;
   overflow: hidden;
+  padding: 20px;
 }
 
 .navbar ul {
@@ -138,6 +139,29 @@ header li .non-uniform-padding h4 {
   font-size: 26px;
   display: inline-block;
 }
+
+/* report title styling by noor */
+.title-bar {
+  width: 100%;
+  display: inline-block;
+}
+.title-bar h1 {
+  float: left;
+}
+.title-bar a {
+  float: right;
+}
+
+.report-buttons {
+  width: 100%;
+  display: inline-block;
+}
+
+.report-buttons button {
+  float: right;
+  margin-left: 10px;
+}
+/* report title styling by noor */
 
 /* date range input field */
 .date-range-input-field {

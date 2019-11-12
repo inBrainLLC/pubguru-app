@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Dropdown, Icon } from "antd";
+import { Menu, Dropdown, Icon, Button } from "antd";
 
 const menu = (
   <Menu>
@@ -41,6 +41,10 @@ class Title extends Component {
           </Dropdown>
         </div>
         <hr />
+        <div className="report-buttons">
+          <Button>How To Implement PubGuru Data Guard</Button>
+          <Button>How To Test PubGuru Data Guard</Button>
+        </div>
       </div>
       // <PageHeader
       //   style={{
