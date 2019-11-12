@@ -3,75 +3,91 @@ import React, { Component } from "react";
 // get our fontawesome imports
 // import { faBars } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Menu, Icon } from 'antd';
+import { Menu, Icon,Typography,Badge } from 'antd';
 const { SubMenu } = Menu;
-
+const { Text } = Typography
 
 class SideBar extends Component {
-  handleClick = e => {
-    console.log('click ', e);
+  state = {
+    collapsed: false,
+  };
+
+  toggleCollapsed = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
   };
 
   render() {
     return (
       <div className="navbar">
+<div style={{ width: 256 }}>
+  
+        <Menu
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          mode="inline"
+          theme="gray"
+          inlineCollapsed={this.state.collapsed}
+        >
+          <Menu.Item key="1">
+            <Icon type="pie-chart" />
+            <span>Dashbord</span>
+          </Menu.Item>
+          <Menu.Item key="2">
+            <Icon type="desktop" />
+            <span>Notification</span>
+            <Badge count={12} style={{ backgroundColor: 'orange' }} />
 
-      <Menu
-        onClick={this.handleClick}
-        style={{ width: 256 }}
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
-        mode="inline"
-      >
-        <SubMenu
-          key="sub1"
-          title={
-            <span>
-              <Icon type="mail" />
-              <span>Navigation One</span>
-            </span>
-          }
-        >
-          <Menu.ItemGroup key="g1" title="Item 1">
-            <Menu.Item key="1">Option 1</Menu.Item>
-            <Menu.Item key="2">Option 2</Menu.Item>
-          </Menu.ItemGroup>
-          <Menu.ItemGroup key="g2" title="Item 2">
-            <Menu.Item key="3">Option 3</Menu.Item>
-            <Menu.Item key="4">Option 4</Menu.Item>
-          </Menu.ItemGroup>
-        </SubMenu>
-        <SubMenu
-          key="sub2"
-          title={
-            <span>
-              <Icon type="appstore" />
-              <span>Navigation Two</span>
-            </span>
-          }
-        >
-          <Menu.Item key="5">Option 5</Menu.Item>
-          <Menu.Item key="6">Option 6</Menu.Item>
-          <SubMenu key="sub3" title="Submenu">
-            <Menu.Item key="7">Option 7</Menu.Item>
-            <Menu.Item key="8">Option 8</Menu.Item>
+          </Menu.Item>
+
+          <div className="with_nav"></div>
+
+          <Text strong>Reports</Text>
+
+            <Menu.Item key="4">
+            <Icon type="mail" />
+
+              Analytics Report
+              </Menu.Item>
+            <Menu.Item key="20">
+            <Icon type="mail" />
+
+              Adx Report
+              </Menu.Item>
+              <SubMenu
+            key="sub1"
+            title={
+              <span>
+                <Icon type="mail" />
+                <span>Advance Reports</span>
+              </span>
+            }
+          >
+            <Menu.Item key="6">Revune Discrepancy</Menu.Item>
+            <Menu.Item key="7">Revune attribution</Menu.Item>
+            <Menu.Item key="8">Google policy</Menu.Item>
+            <Menu.Item key="9">GDPR</Menu.Item>
+            <Menu.Item key="10">Ad Map</Menu.Item>
           </SubMenu>
-        </SubMenu>
-        <SubMenu
-          key="sub4"
-          title={
-            <span>
-              <Icon type="setting" />
-              <span>Navigation Three</span>
-            </span>
-          }
-        >
-          <Menu.Item key="9">Option 9</Menu.Item>
-          <Menu.Item key="10">Option 10</Menu.Item>
-          <Menu.Item key="11">Option 11</Menu.Item>
-          <Menu.Item key="12">Option 12</Menu.Item>
-        </SubMenu>
-      </Menu>
+
+          <div className="with_nav"></div>
+
+          <Text strong>Manage</Text>
+          <Menu.Item key="12">
+            <Icon type="mail" />
+              Account Connections
+              </Menu.Item>
+            
+            <div className="with_nav"></div>
+            <Text strong>Furad detection</Text>
+               
+          <Menu.Item key="14">
+            <Icon type="mail" />
+            Tracfic cap              
+            </Menu.Item>
+        </Menu>
+      </div>
       </div>
     );
   }
