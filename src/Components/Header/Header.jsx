@@ -63,12 +63,12 @@ class Header extends Component {
             className="ant-menu-item"
             src={require("../../assets/img/logo.png")}
             width="180"
-            height="55"
+            height="55" alt="test"
           />
         </Menu.Item>
         <Menu.Item key="mail">
           <Badge count={5}>
-            <a href="#" className="head-example" />
+            <a href="http://google.com/" className="head-example" />
             <Icon type="bell" />
           </Badge>
         </Menu.Item>

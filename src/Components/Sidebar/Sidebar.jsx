@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 // get our fontawesome imports
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Menu, Icon } from 'antd';
 const { SubMenu } = Menu;
 
@@ -14,6 +14,8 @@ class SideBar extends Component {
 
   render() {
     return (
+      <div className="navbar">
+
       <Menu
         onClick={this.handleClick}
         style={{ width: 256 }}
@@ -70,6 +72,7 @@ class SideBar extends Component {
           <Menu.Item key="12">Option 12</Menu.Item>
         </SubMenu>
       </Menu>
+      </div>
     );
   }
 

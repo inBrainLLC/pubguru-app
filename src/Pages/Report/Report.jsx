@@ -8,6 +8,11 @@ import DetailTable from '../../Components/DetailTable/DetailTable';
 
 import data from './demoData';
 
+import { Layout } from 'antd';
+
+const { Content } = Layout;
+
+
 class Report extends Component {
   state = {
     data,
@@ -15,6 +20,10 @@ class Report extends Component {
   
   render() {
     return (
+    <div>
+      <Content style={{ margin: '24px 16px 0' }}>
+        <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+
         <div>
             <Title />
             <Toolbar />
@@ -24,6 +33,10 @@ class Report extends Component {
               data={this.state.data}
             />
         </div>
+        </div>
+      </Content>
+      </div>
+   
     );
   }
 }
