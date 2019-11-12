@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Title from '../../Components/Title/Title';
 import Toolbar from '../../Components/Toolbar/Toolbar';
 import Overview from '../../Components/Overview/Overview';
-import DataChart from '../../Components/DataChart/DataChart';
+import DataChart from '../../Components/LargeChart/LargeChart';
 import DetailTable from '../../Components/DetailTable/DetailTable';
 
 import data from './demoData';
