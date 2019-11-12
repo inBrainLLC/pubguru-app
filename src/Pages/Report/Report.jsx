@@ -12,7 +12,6 @@ import { Layout } from 'antd';
 
 const { Content } = Layout;
 
-
 class Report extends Component {
   state = {
     data,

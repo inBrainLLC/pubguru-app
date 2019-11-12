@@ -1,5 +1,5 @@
 * {
-  font-family: "Tahoma, Geneva, sans-serif";
+  /* font-family: "Tahoma, Geneva, sans-serif"; */
   box-sizing: border-box;
 }
 
@@ -77,9 +77,9 @@ header li .non-uniform-padding h4 {
 
 /* sidebar styling */
 .navbar {
-  width: 20%;
-  float: left;
-  overflow: hidden;
+  /* width: 20%; */
+  /* float: left; */
+  /* overflow: hidden; */
 }
 .ant-badge-not-a-wrapper:not(.ant-badge-status){
     margin-left: 6px;
