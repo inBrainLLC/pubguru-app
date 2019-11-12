@@ -8,19 +8,38 @@ import DetailTable from "../../Components/DetailTable/DetailTable";
 
 import data from "./demoData";
 
+import { Layout } from "antd";
+
+const { Content } = Layout;
+
 class Report extends Component {
   state = {
-    data
+    data,
+    selectedProp: "estimatedEuRevinew",
+    selectedCurrency: "USD"
   };
+
+  // convertCurrency = () => {
+  //   return
+  // }
 
   render() {
     return (
-      <div className="report-content">
-        <Title />
-        <Toolbar />
-        <Overview />
-        <DataChart />
-        <DetailTable data={this.state.data} />
+      <div>
+        <Content style={{ margin: "24px 16px 0" }}>
+          <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
+            <div>
+              <Title />
+              <Toolbar />
+              <Overview />
+              <DataChart
+                data={this.state.data}
+                selectedProp={this.state.selectedProp}
+              />
+              <DetailTable data={this.state.data} />
+            </div>
+          </div>
+        </Content>
       </div>
     );
   }

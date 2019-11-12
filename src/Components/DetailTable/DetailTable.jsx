@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class DetailTable extends Component {
   render() {
     let rows = this.props.data.map(d => {
+      
         console.log(d);
         return (
           <tr>
