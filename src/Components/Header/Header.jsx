@@ -59,7 +59,12 @@ class Header extends Component {
           </Menu.ItemGroup>
         </SubMenu>
         <Menu.Item key="mail">
-          <img className="ant-menu-item" src="../../assets/img/logo.png" />
+          <img
+            className="ant-menu-item"
+            src={require("../../assets/img/logo.png")}
+            width="180"
+            height="55"
+          />
         </Menu.Item>
         <Menu.Item key="mail">
           <Badge count={5}>
