@@ -82,6 +82,12 @@ header li .non-uniform-padding h4 {
   overflow: hidden;
 }
 
+.report-content {
+  width: 80%;
+  float: left;
+  overflow: hidden;
+}
+
 .navbar ul {
   list-style-type: none !important;
   margin: 0;
