@@ -191,3 +191,31 @@ h1 {
 .datepickerclass {
   float: right;
 }
+.vl1 {
+  background:gray;
+  /* height: 50px; */
+  float: left;
+  width: 20px;margin-right: 4px;
+}
+
+.vl2 {
+  background:blue;
+  height: 50px;
+  float: left;
+  width: 30px;
+
+}
+.vl17{
+  background:black;
+  height: 50px;
+  float: left;
+  width: 20px;margin-right: 4px;
+}
+
+.vl27{
+  background:red;
+  height: 50px;
+  float: left;
+  width: 20px;
+  
+}
