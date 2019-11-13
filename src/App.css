@@ -172,6 +172,18 @@ header li .non-uniform-padding h4 {
   margin-left: 10px;
 }
 
+.matric-select {
+  padding: 20px 0px;
+}
+
+.matric-select span {
+  margin-right: 20px;
+}
+
+.matric-select .ant-select {
+  margin-right: 20px;
+}
+
 .data-chart {
   padding: 20px 0px;
   display: inline-block;
