@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Title from "../../Components/Title/Title";
 import Toolbar from "../../Components/Toolbar/Toolbar";
 import Overview from "../../Components/Overview/Overview";
-import DataChart from "../../Components/LargeChart/LargeChart";
+import LargeChart from "../../Components/LargeChart/LargeChart";
 import DetailTable from "../../Components/DetailTable/DetailTable";
 
 import data from "./demoData";
@@ -32,7 +32,7 @@ class Report extends Component {
               <Title />
               <Toolbar />
               <Overview />
-              <DataChart
+              <LargeChart
                 data={this.state.data}
                 selectedProp={this.state.selectedProp}
               />
