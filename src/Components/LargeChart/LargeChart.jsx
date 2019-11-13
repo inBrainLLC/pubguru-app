@@ -99,8 +99,11 @@ class DataChart extends Component {
       },
       xaxis: {
         mode: "time",
-        tickSize: [1, "month"],
-        tickLength: 0,
+        timeBase: "milliseconds",
+        timeformat: "%d %b",
+        minTickSize: [1, "day"],
+        autoScale: "none",
+        tickLength: 1,
         axisLabelFontSizePixels: 12,
         axisLabelPadding: 10,
         ...this.getXDimensions(data),
@@ -119,9 +122,10 @@ class DataChart extends Component {
       },
       grid: {
         hoverable: true,
+        clickable: true,
         borderWidth: 1,
         borderColor: "#d9d9d9",
-        // markings: [ { yaxis: { from: 1, to: 1 } } ]
+        // markings: { xaxis: { from: this.getXDimensions(data).min, to: this.getXDimensions(data).max }, yaxis: { from: 10, to: 10 }, color: "#bb0000" },
         // backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
       },
       colors: ["#3fc0e8"],
