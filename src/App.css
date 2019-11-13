@@ -76,15 +76,23 @@ header li .non-uniform-padding h4 {
 /* header styling */
 
 /* sidebar styling */
-.navbar {
-  /* width: 20%; */
-  /* float: left; */
-  /* overflow: hidden; */
+/* .navbar {
+  width: 20%;
+  float: left;
+  overflow: hidden;
+} */
+
+.report-content {
+  width: 80%;
+  float: left;
+  overflow: hidden;
+  padding: 20px;
 }
-.ant-badge-not-a-wrapper:not(.ant-badge-status){
-    margin-left: 6px;
+
+.ant-badge-not-a-wrapper:not(.ant-badge-status) {
+  margin-left: 6px;
 }
-.with_nav{
+.with_nav {
   width: 100%;
   border-top: 1px solid gray;
   margin-top: 5px;
@@ -141,6 +149,55 @@ header li .non-uniform-padding h4 {
   font-size: 26px;
   display: inline-block;
 }
+
+/* report title styling by noor */
+.title-bar {
+  width: 100%;
+  display: inline-block;
+}
+.title-bar h1 {
+  float: left;
+}
+.title-bar a {
+  float: right;
+}
+
+.report-buttons {
+  width: 100%;
+  display: inline-block;
+}
+
+.report-buttons button {
+  float: right;
+  margin-left: 10px;
+}
+
+.matric-select {
+  padding: 20px 0px;
+}
+
+.matric-select span {
+  margin-right: 20px;
+}
+
+.matric-select .ant-select {
+  margin-right: 20px;
+}
+
+.data-chart {
+  padding: 20px 0px;
+  display: inline-block;
+}
+
+.data-chart .button-dropdown {
+  float: left;
+  margin-right: 20px;
+}
+
+.data-chart span {
+  margin-right: 10px;
+}
+/* report title styling by noor */
 
 /* date range input field */
 .date-range-input-field {
