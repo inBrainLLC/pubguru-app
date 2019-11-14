@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Menu, Dropdown, Icon, Button } from "antd";
+import  Calendar from '../Calendar/Calendar'
+import { Row, Col } from 'antd';
 
 const menu = (
   <Menu>
@@ -33,13 +35,25 @@ class Title extends Component {
     return (
       <div>
         <div className="title-bar">
-          <h1>GDPR Report</h1>
-          <Dropdown overlay={menu}>
+        <Row>
+
+        <Col span={8}> <span>GDPR Report</span></Col>
+
+         
+          {/* <Dropdown overlay={menu}>
             <a className="ant-dropdown-link" href="#">
               Hover me <Icon type="down" />
             </a>
-          </Dropdown>
+
+          </Dropdown> */}
+                <Col span={8} offset={8}>
+
+          <span><Calendar></Calendar></span>
+          </Col>
+          </Row>
+
         </div>
+        
         <hr />
         <div className="report-buttons">
           <Button>How To Implement PubGuru Data Guard</Button>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Menu, Icon, Badge } from "antd";
 import "./Header.less";
+// import { Row, Col } from 'antd';
 
 const { SubMenu } = Menu;
 
@@ -51,8 +52,7 @@ class Header extends Component {
             title={
               <span className="submenu-title-wrapper">
                 DOMAINS (32)
-              <br />
-                example_1.com
+                {/* example_1.com  */}
             </span>
             }
           >
@@ -74,10 +74,10 @@ class Header extends Component {
             />
           </Menu.Item>
           <Menu.Item key="mail">
-            <Badge count={5}>
-              <a href="http://google.com/" className="head-example" />
-              <Icon type="bell" />
-            </Badge>
+          <Badge count={5}> 
+              <Icon type="bell" />  
+
+           </Badge>
           </Menu.Item>
           <SubMenu
             title={
