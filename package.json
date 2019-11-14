@@ -17,6 +17,7 @@
     "less-loader": "^5.0.0",
     "moment": "^2.24.0",
     "react": "^16.11.0",
+    "react-advanced-datetimerange-picker": "^1.0.10",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-bootstrap-datetimerangepicker": "^2.0.4",
     "react-dom": "^16.11.0",

@@ -40,7 +40,7 @@ class Overview extends Component {
       <Col span={18} push={6}>
 
       <Col span={6}>
-        <Tooltip title="prompt text">
+        <Tooltip title="Estimated earnign from EU countires(From GAM)">
         <Icon type="question-circle" />  </Tooltip>   
           <Statistic
             title="Estimated eu revenue"
@@ -50,12 +50,16 @@ class Overview extends Component {
             suffix="%"
           />
              {this.state.value == '+7'?  <Linebar name={"$274.64"}  value1={50} value2={80}/> : <LinebarSeven name={"$274.64"}  value1={50} value2={50}/> }
-              
+               <div className="card">
+  <div className="graph"></div>
+  </div>
+
+
 
 
        </Col>
       <Col span={6} order={2}>
-      <Tooltip title="prompt text">
+      <Tooltip title="Revenue earnd from Every 1,000 EU session">
       <Icon type="question-circle" />  </Tooltip>  
       <Statistic
             title="Estimated eu revenue"
@@ -68,11 +72,12 @@ class Overview extends Component {
 
             {this.state.value == '+7'?  <Linebar name={"$274.64"}  value1={70} value2={50}/> : <LinebarSeven name={"$274.64"}  value1={100} value2={50}/> }
                    
-       
+            <div className="graph"></div>
+
 
           </Col>
       <Col span={6} order={1}>
-      <Tooltip title="prompt text">
+      <Tooltip title="Revenue earnd from Every 1,000 EU pageview">
       <Icon type="question-circle" />  </Tooltip>  
       <Statistic
             title="Estimated eu revenue"
@@ -83,6 +88,7 @@ class Overview extends Component {
           /> 
                 
 {this.state.value === '+7'?  <Linebar name={"$274.64"}  value1={100} value2={50}/> : <LinebarSeven name={"$274.64"}  value1={50} value2={80}/> }
+<div className="graph"></div>
 
                    
 

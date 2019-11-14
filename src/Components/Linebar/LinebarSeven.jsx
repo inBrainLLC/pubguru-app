@@ -9,7 +9,7 @@ class LinebarSeven extends Component {
       <div class="vl1" style={{height: this.props.value1+"px"}}></div>
       <div class="vl2" style={{height: this.props.value2+"px"}}></div>
        {this.props.name}
-      chart here
+       {/* <SplineAreaChart></SplineAreaChart> */}
 
       </div>
     );

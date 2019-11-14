@@ -276,3 +276,11 @@ h1 {
   width: 20px;
   
 }
+.graph{
+  background-image: url(./assets/graph.png);
+  height: 50px;
+  width: 203px;
+  /* position: relative; */
+  margin-top: 100px;
+  margin-left: -35px;
+}
