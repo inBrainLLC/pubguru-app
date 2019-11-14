@@ -27,7 +27,7 @@ class Report extends Component {
     return (
       <div>
         <Content style={{ margin: "24px 16px 0" }}>
-          <div style={{ padding: 24, background: "#fff", minHeight: 360 }}>
+          <div style={{ padding: 24, minHeight: 360 }}>
             <div>
               <Title />
               <Toolbar />

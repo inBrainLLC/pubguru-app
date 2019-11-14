@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Card } from "antd";
+
 class DetailTable extends Component {
   render() {
     let rows = this.props.data.map(d => {
@@ -20,7 +22,7 @@ class DetailTable extends Component {
         );
       });
     return (
-        <div>
+        <Card style={{ margin: '40px 0', borderRadius: '5px' }}>
             <table border="1">
                 <thead>
                 <th>Date</th>
@@ -35,7 +37,7 @@ class DetailTable extends Component {
               </thead>
                 <tbody>{rows}</tbody>
              </table>
-        </div>
+        </Card>
     );
   }
 }

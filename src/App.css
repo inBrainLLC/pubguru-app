@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 * {
-  /* font-family: "Tahoma, Geneva, sans-serif"; */
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
@@ -9,6 +11,7 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  background-color: #f0f6f7;
 }
 
 /* html {
@@ -163,6 +166,7 @@ header li .non-uniform-padding h4 {
 }
 
 .report-buttons {
+  margin: 10px 0;
   width: 100%;
   display: inline-block;
 }
@@ -176,13 +180,13 @@ header li .non-uniform-padding h4 {
   padding: 20px 0px;
 }
 
-.matric-select span {
+/* .matric-select span {
   margin-right: 20px;
 }
 
 .matric-select .ant-select {
   margin-right: 20px;
-}
+} */
 
 .data-chart {
   padding: 20px 0px;
