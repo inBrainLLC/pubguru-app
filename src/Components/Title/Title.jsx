@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import { Menu, Dropdown, Icon, Button } from "antd";
+import { Menu,Icon } from "antd";
 import  Calendar from '../Calendar/Calendar'
 import { Row, Col } from 'antd';
+import DateTimeRangeContainer from 'react-advanced-datetimerange-picker'
+import {FormControl} from 'react-bootstrap'
+import moment from "moment"
 
 const menu = (
   <Menu>
@@ -31,13 +34,16 @@ const menu = (
 );
 
 class Title extends Component {
+
+ 
   render() {
+
     return (
       <div>
         <div className="title-bar">
         <Row>
 
-        <Col span={8}> <span>GDPR Report</span></Col>
+        <Col span={2}> <span>GDPR Report</span></Col>
 
          
           {/* <Dropdown overlay={menu}>
@@ -46,10 +52,14 @@ class Title extends Component {
             </a>
 
           </Dropdown> */}
-                <Col span={8} offset={8}>
+                <Col span={12} offset={8}>
 
-          <span><Calendar></Calendar></span>
-          </Col>
+
+       
+           <span><Calendar></Calendar></span>
+      
+      
+        </Col>
           </Row>
 
         </div>

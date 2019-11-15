@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Linebar from '../Linebar/Linebar';
-import LinebarSeven from '../Linebar/LinebarSeven'
 import { Radio, Statistic, Card, Row, Col, Tooltip, Icon } from 'antd';
 
 class Overview extends Component {
@@ -38,7 +37,7 @@ class Overview extends Component {
                   prefix={<Icon type="arrow-down" />}
                   suffix="%"
                 />
-                {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={50} value2={80} /> : <LinebarSeven name={"$274.64"} value1={50} value2={50} />}
+                {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={50} value2={80} /> : <Linebar name={"$100.64"} value1={80} value2={50} />}
                 <div className="card">
                   <div className="graph"></div>
                 </div>
@@ -53,7 +52,7 @@ class Overview extends Component {
                   prefix={<Icon type="arrow-up" />}
                   suffix="%"
                 />
-                {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={70} value2={50} /> : <LinebarSeven name={"$274.64"} value1={100} value2={50} />}
+                {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={70} value2={50} /> : <Linebar name={"$100.64"} value1={60} value2={50} />}
                 <div className="graph"></div>
               </Col>
               <Col span={6} order={1}>
@@ -66,7 +65,7 @@ class Overview extends Component {
                   prefix={<Icon type="arrow-up" />}
                   suffix="%"
                 />
-                {this.state.value === '+7' ? <Linebar name={"$274.64"} value1={100} value2={50} /> : <LinebarSeven name={"$274.64"} value1={50} value2={80} />}
+                {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={70} value2={50} /> : <Linebar name={"$100.64"} value1={30} value2={50} />}
                 <div className="graph"></div>
               </Col>
             </Col>
