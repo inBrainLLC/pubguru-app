@@ -20,14 +20,14 @@ class ReportPage extends Component {
 
   render() {
       return (
-        <Layout style={{ minHeight: '100vh'}}>
+        <Layout className="core-layout">
           <Header style={{ background: '#fff', padding: 0 }}>
             <AppHeader 
               onToggle={this.toggle}
               isSidebarCollapsed={this.state.isSidebarCollapsed}
             />
           </Header>
-          <Layout>
+          <Layout style={{ background: '#f0f6f7' }}>
             <Sider
               collapsed={this.state.isSidebarCollapsed}
               collapsible
