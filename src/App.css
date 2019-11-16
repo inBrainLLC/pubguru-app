@@ -11,7 +11,18 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-  background-color: #f0f6f7;
+  background: #f0f6f7 !important;
+  background-color: #f0f6f7 !important;
+}
+
+.core-layout {
+  background: rgb(240, 246, 247);
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.ant-layout-content {
+  margin-top: 0 !important;
 }
 
 /* html {
@@ -95,9 +106,10 @@ header li .non-uniform-padding h4 {
 .ant-badge-not-a-wrapper:not(.ant-badge-status) {
   margin-left: 6px;
 }
+
 .with_nav {
   width: 100%;
-  border-top: 1px solid gray;
+  border-top: 1px solid #bdbdbd;
   margin-top: 5px;
   height: 10px;
   padding: 10px;
@@ -160,14 +172,9 @@ header li .non-uniform-padding h4 {
 
 /* report title styling by noor */
 .title-bar {
-  width: 100%;
-  display: inline-block;
-}
-.title-bar h1 {
-  float: left;
-}
-.title-bar a {
-  float: right;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 .report-buttons {
@@ -242,7 +249,6 @@ h1 {
 }
 
 .body {
-  background: #fafafa;
   padding: 0 20px;
   max-height: 0;
   overflow: hidden;

@@ -10,6 +10,8 @@
     height: auto;
     float: left;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .header_left a{
     float: left;
@@ -21,11 +23,12 @@
         color: #6d6d6d;
     }
 }
-.header_left ul{
+.header_left ul {
     // width: 100%;
     height: auto;
-    float: left;
+    // float: right;
     position: relative;
+    border-left: 1px solid #c8cbcc;
 }
 .header_left ul li{
     list-style: none;
@@ -39,7 +42,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.header_left ul li span{
+.header_left ul li span {
     display: inline;
     width: 100%;
     float: left;
@@ -50,6 +53,7 @@
     font-weight: bold;
     color: #7b7b7b;
     border: none;
+    letter-spacing: 1.3px;
 }
 .header_left ul li select{
     float: left;
@@ -134,15 +138,6 @@
     font-size: 12px;
 }
 
-
-
-
-
-
-
-
-
-
 // For CSS Grid
 .grid_3{
     width: 33.3333%;
@@ -150,3 +145,11 @@
     position: relative;
 }
 // For CSS Grid
+
+
+.header-hamburger {
+    width: 79px;
+    font-size: 20px;
+    height: 100%;
+    display: block;
+}

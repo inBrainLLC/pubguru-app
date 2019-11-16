@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import { Menu, Icon, Badge } from "antd";
+import { Icon, } from "antd";
 import "./Header.less";
-// import { Row, Col } from 'antd';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const { SubMenu } = Menu;
 
 class Header extends Component {
   state = {
@@ -21,10 +17,13 @@ class Header extends Component {
   render() {
     return (
       <div className="header-container">
-
         <div className="grid_3">
           <div className="header_left">
-            <a href=""><i class="fas fa-bars"></i></a>
+            <Icon
+              className="header-hamburger"
+              type={this.props.isSidebarCollapsed ? 'menu-unfold' : 'menu-fold'}
+              onClick={this.props.onToggle}
+            />
             <ul>
               <li>
                 <span>PUBLISHERS(207)</span>
@@ -42,18 +41,7 @@ class Header extends Component {
                   <option value="Allafrica">example3.com</option>
                 </select>
               </li>
-            </ul>
-            {/*<a href="">test n</a>
-            <div className="drop_down show">
-              <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-              </ul>
-            </div>*/}
-
-            
+            </ul>            
           </div>
         </div>
 
@@ -68,11 +56,10 @@ class Header extends Component {
             <ul>
               <li>
                 <span>12</span>
-                <Icon type="bell" theme="filled" />
+                <Icon type="bell" style={{ color: '#9eacb7' }} />
               </li>
               <li> 
-                <i class="fas fa-cog"></i>
-                <i class="fas fa-caret-down"></i>
+                <div style={{ display: 'inline' }}><Icon type="setting" style={{ color: '#9eacb7' }} /> <Icon type="caret-down" style={{ color: '#9eacb7', fontSize: '10px' }} /></div>
               </li>
             </ul>
           </div>

@@ -5,7 +5,7 @@ class Toolbar extends Component {
   render() {
     return (
         <div>
-          <hr />
+          <hr style={{ color: '#bdbdbd'}} />
           <div className="report-buttons">
             <Button>How To Implement PubGuru Data Guard</Button>
             <Button>How To Test PubGuru Data Guard</Button>
