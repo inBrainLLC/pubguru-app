@@ -95,9 +95,10 @@ header li .non-uniform-padding h4 {
 .ant-badge-not-a-wrapper:not(.ant-badge-status) {
   margin-left: 6px;
 }
+
 .with_nav {
   width: 100%;
-  border-top: 1px solid gray;
+  border-top: 1px solid #bdbdbd;
   margin-top: 5px;
   height: 10px;
   padding: 10px;
