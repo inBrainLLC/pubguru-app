@@ -8,6 +8,7 @@ const { Text } = Typography;
 
 class SideBar extends Component {
   render() {
+    const { isSidebarCollapsed } = this.props;
     return (
       <div className="navbar">
         <div>
@@ -16,7 +17,7 @@ class SideBar extends Component {
             defaultOpenKeys={["sub1"]}
             mode="inline"
             theme="gray"
-            inlineCollapsed={this.props.isSidebarCollapsed}
+            inlineCollapsed={isSidebarCollapsed}
           >
             <Menu.Item key="1">
               <Icon type="clock-circle" className="menu-icon" /><span>Dashbord</span>
@@ -24,21 +25,21 @@ class SideBar extends Component {
             <Menu.Item key="2">
               <Icon type="bell" theme="filled" className="menu-icon" />
               <span>Notification</span>
-              <Badge count={12} style={{ backgroundColor: "orange" }} />
+              {!isSidebarCollapsed && <Badge count={12} style={{ backgroundColor: "orange" }} />}
             </Menu.Item>
 
             <div className="with_nav"></div>
 
-            <Text strong className="section-header">Reports</Text>
+            {!isSidebarCollapsed && <Text strong className="section-header">Reports</Text>}
 
             <Menu.Item key="4">
-              <Icon type="bar-chart" className="menu-icon" />Analytics Report
+              <Icon type="bar-chart" className="menu-icon" />{!isSidebarCollapsed && 'Analytics Report'}
             </Menu.Item>
             <Menu.Item key="20">
-              <Icon type="line-chart" className="menu-icon" />Adx Report
+              <Icon type="line-chart" className="menu-icon" />{!isSidebarCollapsed && 'Adx Report'}
             </Menu.Item>
             <Menu.Item key="21">
-              <Icon type="gold" className="menu-icon" />Ad Network Report
+              <Icon type="gold" className="menu-icon" />{!isSidebarCollapsed && 'Ad Network Report'}
             </Menu.Item>
             <SubMenu
               className="submenu"
@@ -58,16 +59,16 @@ class SideBar extends Component {
 
             <div className="with_nav"></div>
 
-            <Text strong className="section-header">Manage</Text>
+            {!isSidebarCollapsed && <Text strong className="section-header">Manage</Text>}
             <Menu.Item key="12">
-              <Icon type="account-book" className="menu-icon" />Account Connections
+              <Icon type="account-book" className="menu-icon" />{!isSidebarCollapsed && 'Account Connections'}
             </Menu.Item>
 
             <div className="with_nav"></div>
-            <Text strong className="section-header">Fraud detection</Text>
+            {!isSidebarCollapsed && <Text strong className="section-header">Fraud detection</Text>}
 
             <Menu.Item key="14">
-              <Icon type="codepen" className="menu-icon" />Tracfic cap
+              <Icon type="codepen" className="menu-icon" />{!isSidebarCollapsed && 'Tracfic cop'}
             </Menu.Item>
           </Menu>
         </div>
