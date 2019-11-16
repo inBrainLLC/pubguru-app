@@ -7,58 +7,14 @@ class DetailTable extends Component {
   
   getData = () => {
     const {data } = this.props;
-
     return data
   };
 
-
-  // render() {
-  //   let rows = this.props.data.map(d => {
-      
-  //       console.log(d);
-  //       return (
-  //         <tr>
-  //           <td>{d.date}</td>
-  //           <td>{d.totalPageView}</td>
-  //           <td>{d.estimatedEuRevinew}</td>
-  //           <td>{d.nonEuPageviews}</td>
-  //           <td>{d.euPageviews}</td>
-  //           <td>{d.priviouslyConsented}</td>
-  //           <td>{d.shownAndConsented}</td>
-  //           <td>{d.shownAndNonConsented}</td>
-  //           <td>{d.gdprPopupCtr}</td>
-  //         </tr>
-  //       );
-  //     });
-  //   return (
-  //       <Card style={{ margin: '40px 0', borderRadius: '5px' }}>
-  //           <table border="1">
-  //               <thead>
-  //               <th>Date</th>
-  //               <th>Total Page Views</th>
-  //               <th>Estimated Eu Revinew</th>
-  //               <th>Non Eu Page views</th>
-  //               <th>Eu Page views</th>
-  //               <th>Priviously Consented</th>
-  //               <th>Shown And Consented</th>
-  //               <th>Shown And non Consented</th>
-  //               <th>Gdpr Popup Ctr</th>
-  //             </thead>
-  //               <tbody>{rows}</tbody>
-  //            </table>
-  //       </Card>
-  //   );
-  // }
-
-     render() {
-
-
+  render() {
       const columns = [
         {
           title: 'Date',
           dataIndex: 'date',
-          // specify the condition of filtering result
-          // here is that finding the name started with `value`
           sorter: (a, b) => a.date.length - b.date.length,
           sortDirections: ['descend'],
         },
@@ -110,13 +66,13 @@ class DetailTable extends Component {
 
 
 
-  function onChange( filters, sorter, extra) {
-    console.log('params', sorter, extra);
+  function onChange( filters, sorter) {
+    console.log('params', sorter);
   }
   return(
-   <Card style={{ margin: '40px 0', borderRadius: '5px'}}>
-      <Table columns={columns} dataSource={data} onChange={onChange} />
-  </Card>
+    <Card style={{ margin: '40px 0', borderRadius: '5px'}} className="datatable">
+        <Table columns={columns} dataSource={data} onChange={onChange} />
+    </Card>
   )
 }
 }

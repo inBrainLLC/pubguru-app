@@ -132,6 +132,9 @@ header li .non-uniform-padding h4 {
   background-color: #555;
   color: white;
 }
+.ant-menu-item-selected{
+  background-color: #3FC0E8;
+}
 /* sidebar styling */
 
 /* report styling */
@@ -262,33 +265,22 @@ h1 {
 }
 
 .vl2 {
-  background:blue;
+  background:#3FC0E8;
   float: left;
   width: 25px;
-
-}
-.vl17{
-  background:black;
-  height: 50px;
-  float: left;
-  width: 20px;margin-right: 4px;
 }
 
-.vl27{
-  background:red;
-  height: 50px;
-  float: left;
-  width: 20px;
-  
-}
 .graph{
   background-image: url(./assets/graph.png);
   height: 50px;
   width: 203px;
-  /* position: relative; */
   margin-top: 100px;
   margin-left: -35px;
 }
 .calenderformControlsTextB{
   float:right;
+}
+
+.datatable{
+  color: black;
 }
