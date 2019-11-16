@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import DataChart from '../DataChart/DataChart'
 
 class Linebar extends Component {
 
@@ -8,10 +7,14 @@ class Linebar extends Component {
     return (
 
         <div>
-        <div class="vl1" style={{height: this.props.value1+"px"}}></div>
-        <div class="vl2" style={{height: this.props.value2+"px"}}></div>
+          <div class='wrapper'>
+
+            <div class="vl1" style={{height: this.props.value1+"px",  background:'gray',
+  float: 'left'}}></div>
+             <div class="vl2" style={{height: this.props.value2+"px",  background:'blue',
+  float: 'left'}}></div>
          {this.props.name}
-         {/* <DataChart></DataChart> */}
+         </div>
 
         </div>
       

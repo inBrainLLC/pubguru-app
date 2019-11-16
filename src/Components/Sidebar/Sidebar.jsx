@@ -20,11 +20,10 @@ class SideBar extends Component {
             inlineCollapsed={this.props.isSidebarCollapsed}
           >
             <Menu.Item key="1">
-              <Icon type="pie-chart" />
-              <span>Dashbord</span>
+            <Icon type="clock-circle" />              <span>Dashbord</span>
             </Menu.Item>
             <Menu.Item key="2">
-              <Icon type="desktop" />
+            <Icon type="bell" theme="filled" />
               <span>Notification</span>
               <Badge count={12} style={{ backgroundColor: "orange" }} />
             </Menu.Item>
@@ -34,19 +33,16 @@ class SideBar extends Component {
             <Text strong>Reports</Text>
 
             <Menu.Item key="4">
-              <Icon type="mail" />
-              Analytics Report
+            <Icon type="bar-chart" />              Analytics Report
             </Menu.Item>
             <Menu.Item key="20">
-              <Icon type="mail" />
-              Adx Report
+            <Icon type="line-chart" />              Adx Report
             </Menu.Item>
             <SubMenu
               key="sub1"
               title={
                 <span>
-                  <Icon type="mail" />
-                  <span>Advance Reports</span>
+<Icon type="pie-chart" />                  <span>Advance Reports</span>
                 </span>
               }
             >
@@ -61,16 +57,14 @@ class SideBar extends Component {
 
             <Text strong>Manage</Text>
             <Menu.Item key="12">
-              <Icon type="mail" />
-              Account Connections
+            <Icon type="account-book" />              Account Connections
             </Menu.Item>
 
             <div className="with_nav"></div>
             <Text strong>Furad detection</Text>
 
             <Menu.Item key="14">
-              <Icon type="mail" />
-              Tracfic cap
+            <Icon type="codepen" />              Tracfic cap
             </Menu.Item>
           </Menu>
         </div>
@@ -79,5 +73,4 @@ class SideBar extends Component {
   }
 }
 
-// ReactDOM.render(<App />, document.getElementById("app"));
 export default SideBar;

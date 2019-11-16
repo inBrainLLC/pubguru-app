@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Menu, Icon, Badge } from "antd";
 import "./Header.less";
 // import { Row, Col } from 'antd';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const { SubMenu } = Menu;
 
@@ -20,82 +21,63 @@ class Header extends Component {
   render() {
     return (
       <div className="header-container">
-        <Icon
-          className="trigger"
-          type={this.props.isSidebarCollapsed ? 'menu-unfold' : 'menu-fold'}
-          onClick={this.toggle}
-        />
-        <Menu
-          onClick={this.handleClick}
-          selectedKeys={[this.state.current]}
-          mode="horizontal"
-        >
-          <SubMenu
-            title={
-              <span className="submenu-title-wrapper">
-                PUBLISHERS (207)
-              <br />
-                Allafrica
-            </span>
-            }
-          >
-            <Menu.ItemGroup title="Item 1">
-              <Menu.Item key="setting:1">Option 1</Menu.Item>
-              <Menu.Item key="setting:2">Option 2</Menu.Item>
-            </Menu.ItemGroup>
-            <Menu.ItemGroup title="Item 2">
-              <Menu.Item key="setting:3">Option 3</Menu.Item>
-              <Menu.Item key="setting:4">Option 4</Menu.Item>
-            </Menu.ItemGroup>
-          </SubMenu>
-          <SubMenu
-            title={
-              <span className="submenu-title-wrapper">
-                DOMAINS (32)
-                {/* example_1.com  */}
-            </span>
-            }
-          >
-            <Menu.ItemGroup title="Item 1">
-              <Menu.Item key="setting:1">Option 1</Menu.Item>
-              <Menu.Item key="setting:2">Option 2</Menu.Item>
-            </Menu.ItemGroup>
-            <Menu.ItemGroup title="Item 2">
-              <Menu.Item key="setting:3">Option 3</Menu.Item>
-              <Menu.Item key="setting:4">Option 4</Menu.Item>
-            </Menu.ItemGroup>
-          </SubMenu>
-          <Menu.Item key="mail">
-            <img
-              className="ant-menu-item"
-              src={require("../../assets/img/logo.png")}
-              width="180"
-              height="55" alt="test"
-            />
-          </Menu.Item>
-          <Menu.Item key="mail">
-          <Badge count={5}> 
-              <Icon type="bell" />  
 
-           </Badge>
-          </Menu.Item>
-          <SubMenu
-            title={
-              <span className="submenu-title-wrapper">
-                <Icon type="appstore" />
-              </span>
-            }
-          >
-            <Menu.ItemGroup title="Item 1">
-              <Menu.Item key="setting:1">Option 1</Menu.Item>
-              <Menu.Item key="setting:2">Option 2</Menu.Item>
-            </Menu.ItemGroup>
-            <Menu.ItemGroup title="Item 2">
-              <Menu.Item key="setting:3">Option 3</Menu.Item>
-              <Menu.Item key="setting:4">Option 4</Menu.Item>
-            </Menu.ItemGroup>
-          </SubMenu>
-        </Menu>
+        <div className="grid_3">
+          <div className="header_left">
+            <a href=""><i class="fas fa-bars"></i></a>
+            <ul>
+              <li>
+                <span>PUBLISHERS(207)</span>
+                <select>
+                  <option value="Allafrica">Allafrica 1</option>
+                  <option value="Allafrica">Allafrica 2</option>
+                  <option value="Allafrica">Allafrica 3</option>
+                </select>
+              </li>
+              <li> 
+                <span>DOMAINS(32)</span>
+                <select>
+                  <option value="Allafrica">example1.com</option>
+                  <option value="Allafrica">example2.com</option>
+                  <option value="Allafrica">example3.com</option>
+                </select>
+              </li>
+            </ul>
+            {/*<a href="">test n</a>
+            <div className="drop_down show">
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </div>*/}
+
+            
+          </div>
+        </div>
+
+        <div className="grid_3">
+          <div className="header_logo">
+            <img src={require("../../assets/img/logo.png")} alt="logo"/>
+          </div>
+        </div>
+
+        <div className="grid_3">
+          <div className="header_right">
+            <ul>
+              <li>
+                <span>12</span>
+                <Icon type="bell" theme="filled" />
+              </li>
+              <li> 
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-caret-down"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     );
   }
