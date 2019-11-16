@@ -2,10 +2,8 @@ import React, { Component } from "react";
 // import $ from "jquery";
 // import daterangepicker from "daterangepicker";
 import { Icon } from 'antd';
-
-
 import DateTimeRangeContainer from 'react-advanced-datetimerange-picker'
-import {FormControl} from 'react-bootstrap'
+// import {FormControl} from 'react-bootstrap'
 import moment from "moment"
 
 // class Calendar extends Component {
@@ -88,7 +86,7 @@ render(){
         "sundayFirst" : false
     }
     let maxDate = moment(start).add(24, "hour");
-    let disabled = true;
+    // let disabled = true;
     let value = `${this.state.start.format('DD-MM-YYYY HH:mm')} - ${this.state.end.format('DD-MM-YYYY HH:mm')}`;
   
   return(

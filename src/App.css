@@ -287,6 +287,8 @@ h1 {
   float:right;
 }
 
-.datatable{
-  color: black;
+
+.ant-table-thead > tr > th.ant-table-column-sort{
+  background:#3FC0E8;
+
 }

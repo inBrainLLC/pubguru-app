@@ -1,6 +1,6 @@
 const data = [
     {
-        date: '2019-09-22', // transform this into unix time
+        //date: '2019-09-22', // transform this into unix time
         date: 1569085200000,
         totalPageView: 845850,
         estimatedEuRevinew: 38.25,

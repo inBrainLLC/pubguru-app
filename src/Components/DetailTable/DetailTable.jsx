@@ -2,6 +2,9 @@ import React, { Component } from "react";
 
 import { Card,Table } from "antd";
 
+import './DetailTable.less';
+
+
 class DetailTable extends Component {  
   
   
