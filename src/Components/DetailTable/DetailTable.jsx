@@ -126,7 +126,9 @@ class DetailTable extends Component {
   onSelect = (pagination, filters, sorter, extra) => {
     console.log('params', pagination, filters, sorter, extra);
     console.log(sorter.field);
-    this.props.setSelectedMetric(sorter.field);
+    if (sorter.field !== 'date') {
+      this.props.setSelectedMetric(sorter.field);
+    }
   }
 
   render() {
