@@ -95,7 +95,7 @@ class DataChart extends Component {
         <Card style={{ borderRadius: '5px' }}>
           <LargeChart
             data={this.props.data}
-            selectedProp={this.props.selectedProp}
+            selectedMetric={this.props.selectedMetric}
           />
         </Card>
       </div>

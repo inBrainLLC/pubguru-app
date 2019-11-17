@@ -9,8 +9,8 @@ class LargeChart extends Component {
   }
 
   getData = () => {
-    const { selectedProp, data } = this.props;
-    return data.map(d => [d.date, d[selectedProp]]);
+    const { selectedMetric, data } = this.props;
+    return data.map(d => [d.date, d[selectedMetric]]);
   };
 
   getXDimensions = data => {
@@ -78,7 +78,7 @@ class LargeChart extends Component {
 
     return (
       <div>
-        <ReactFlot id={this.state.id} options={options} data={dataset} width="100%" height="75px" />
+        <ReactFlot id={this.state.id} options={options} data={dataset} width="95%" height="75px" />
       </div>
     );
   }

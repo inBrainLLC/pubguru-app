@@ -15,9 +15,11 @@ const { Content } = Layout;
 class Report extends Component {
   state = {
     data,
-    selectedProp: "estimatedEuRevinew",
+    selectedMetric: "estimatedEuRevinew",
     selectedCurrency: "USD",
   };
+
+  setSelectedMetric = selectedMetric => this.setState({ selectedMetric });
 
   // convertCurrency = () => {
   //   return
@@ -32,20 +34,23 @@ class Report extends Component {
               <Title />
               <Toolbar
                 data={this.state.data}
-                selectedProp={this.state.selectedProp}
+                selectedMetric={this.state.selectedMetric}
                 selectedCurrency={this.state.selectedCurrency}
               />
               <Overview
                 data={this.state.data}
-                selectedProp={this.state.selectedProp}
+                selectedMetric={this.state.selectedMetric}
+                setSelectedMetric={this.setSelectedMetric}
               />
               <Chart
                 data={this.state.data}
-                selectedProp={this.state.selectedProp}
+                selectedMetric={this.state.selectedMetric}
+                setSelectedMetric={this.setSelectedMetric}
               />
               <DetailTable
                 data={this.state.data}
-                selectedProp={this.state.selectedProp}
+                selectedMetric={this.state.selectedMetric}
+                setSelectedMetric={this.setSelectedMetric}
               />
             </div>
           </div>

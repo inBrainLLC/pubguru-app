@@ -317,9 +317,15 @@ h1 {
 
 .overview-data {
   min-height: 100px;
+  font-weight: 600;
 }
 
 .overview-data-title .ant-statistic-content {
+  font-size: 13px;
+  margin-left: 7px;
+}
+
+.overview-data-title .ant-statistic-content-suffix {
   font-size: 13px;
 }
 
@@ -328,6 +334,7 @@ h1 {
   text-transform: uppercase;
   font-size: 13px;
   align-items: center;
+  letter-spacing: 1px;
 }
 
 .overview-data-details {

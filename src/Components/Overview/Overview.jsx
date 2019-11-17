@@ -62,7 +62,7 @@ class Overview extends Component {
                     <Statistic value={274.64} precision={2} prefix="$" />
                   </div>
                 </div>
-                <SmallChart data={this.props.data} selectedProp={this.props.selectedProp} />
+                <SmallChart data={this.props.data} selectedMetric={this.props.selectedMetric} />
               </Col>
               <Col span={8}>
                 <div className="overview-data">
@@ -84,7 +84,7 @@ class Overview extends Component {
                     <Statistic value={1.33} precision={2} prefix="$" />
                   </div>
                 </div>
-                <SmallChart data={this.props.data} selectedProp={this.props.selectedProp} />
+                <SmallChart data={this.props.data} selectedMetric={this.props.selectedMetric} />
               </Col>
               <Col span={8}>
                 <div className="overview-data">
@@ -106,7 +106,7 @@ class Overview extends Component {
                     <Statistic value={1.26} precision={2} prefix="$" />
                   </div>
                 </div>
-                <SmallChart data={this.props.data} selectedProp={this.props.selectedProp} />
+                <SmallChart data={this.props.data} selectedMetric={this.props.selectedMetric} />
               </Col>
             </Col>
           </Row>

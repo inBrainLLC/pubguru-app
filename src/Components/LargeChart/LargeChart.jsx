@@ -9,8 +9,8 @@ class LargeChart extends Component {
   }
 
   getData = () => {
-    const { selectedProp, data } = this.props;
-    return data.map(d => [d.date, d[selectedProp]]);
+    const { selectedMetric, data } = this.props;
+    return data.map(d => [d.date, d[selectedMetric]]);
   };
 
   getXDimensions = data => {
