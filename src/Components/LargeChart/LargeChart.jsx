@@ -68,9 +68,6 @@ class LargeChart extends Component {
         ...this.getYDimensions(data),
       },
       legend: {
-        // noColumns: 0,
-        // labelBoxBorderColor: "#000000",
-        // position: "nw"
       },
       grid: {
         hoverable: true,
@@ -79,6 +76,7 @@ class LargeChart extends Component {
         borderColor: "#d9d9d9",
       },
       colors: ["#3fc0e8"],
+      shadowSize: 0,
     };
 
     return (

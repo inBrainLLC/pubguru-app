@@ -29,56 +29,42 @@ class LargeChart extends Component {
 
   getYDimensions = data => {
     const yAxis = data.map(c => c[1]);
-    const max = Math.max(...yAxis) * 1.20;
-    // const min = Math.min(...yAxis);
-    return { max, min: 0 };
+    const max = Math.max(...yAxis) * 1.10;
+    const min = Math.min(...yAxis) * 0.80;
+    return { max, min };
   }
 
   render() {
     const data = this.getData();
 
     var dataset = [
-        { data: data, points: { symbol: "circle" } }, // color: #3fc0e8;
+        { data: data, points: { symbol: "circle" } },
     ];
 
     const options = {
       lines: {
         show: true,
-        backgroundColor: { colors: ["#def4fb"] },
-        // fillColor: { colors: [ { opacity: 0.8 }, { opacity: 0.1 } ] },
         show: true, 
         fill: true,
+        lineWidth: 1,
       },
       points: {
-        radius: 3,
-        fill: true,
+        radius: 2,
+        // fill: true,
         show: true
       },
       xaxis: {
         mode: "time",
         tickLength: 0,
         ticks: [],
-        // timeBase: "milliseconds",
-        // timeformat: "%d %b",
-        // minTickSize: [1, "day"],
-        // autoScale: "none",
-        // axisLabelFontSizePixels: 12,
-        // axisLabelPadding: 10,
-        // ...this.getXDimensions(data),
       },
       yaxis: {
         position: "left",
         tickLength: 0,
         ticks: [],
-        // axisLabel: "Change(%)",
-        // axisLabelUseCanvas: true,
-        // axisLabelPadding: 10,
         ...this.getYDimensions(data),
       },
       legend: {
-        // noColumns: 0,
-        // labelBoxBorderColor: "#000000",
-        // position: "nw"
       },
       grid: {
         hoverable: true,
@@ -87,11 +73,12 @@ class LargeChart extends Component {
         borderColor: "transparent",
       },
       colors: ["#38bee7"],
+      shadowSize: 0,
     };
 
     return (
       <div>
-        <ReactFlot id={this.state.id} options={options} data={dataset} width="100%" height="100px" />
+        <ReactFlot id={this.state.id} options={options} data={dataset} width="100%" height="75px" />
       </div>
     );
   }
