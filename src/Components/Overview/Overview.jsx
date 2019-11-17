@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Linebar from '../Linebar/Linebar';
 import { Radio, Statistic, Card, Row, Col, Tooltip, Icon } from 'antd';
+import SmallChart from '../SmallChart/SmallChart';
 
 class Overview extends Component {
   state = {
@@ -15,7 +16,6 @@ class Overview extends Component {
   };
 
   render() {
-
     const radioStyle = {
       display: 'block',
       height: '30px',
@@ -39,7 +39,10 @@ class Overview extends Component {
                 />
                 {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={50} value2={80} /> : <Linebar name={"$100.64"} value1={80} value2={50} />}
                 <div className="card">
-                  <div className="graph"></div>
+                  <SmallChart
+                    data={this.props.data}
+                    selectedProp={this.props.selectedProp}
+                  />
                 </div>
               </Col>
               <Col span={6} order={2}>
@@ -53,7 +56,10 @@ class Overview extends Component {
                   suffix="%"
                 />
                 {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={70} value2={50} /> : <Linebar name={"$100.64"} value1={60} value2={50} />}
-                <div className="graph"></div>
+                <SmallChart
+                    data={this.props.data}
+                    selectedProp={this.props.selectedProp}
+                  />
               </Col>
               <Col span={6} order={1}>
                 <Tooltip title="Revenue earnd from Every 1,000 EU pageview">
@@ -66,7 +72,10 @@ class Overview extends Component {
                   suffix="%"
                 />
                 {this.state.value == '+7' ? <Linebar name={"$274.64"} value1={70} value2={50} /> : <Linebar name={"$100.64"} value1={30} value2={50} />}
-                <div className="graph"></div>
+                <SmallChart
+                    data={this.props.data}
+                    selectedProp={this.props.selectedProp}
+                  />
               </Col>
             </Col>
             <Col span={6} pull={18}>

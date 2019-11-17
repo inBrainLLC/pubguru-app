@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import ReactFlot from "react-flot";
 import '../../../node_modules/react-flot/flot/jquery.flot.time';
+import uuid from 'uuid';
 
 class LargeChart extends Component {
+  state = {
+    id: uuid(),
+  }
+
   getData = () => {
     const { selectedProp, data } = this.props;
     return data.map(d => [d.date, d[selectedProp]]);
@@ -78,7 +83,7 @@ class LargeChart extends Component {
 
     return (
       <div>
-        <ReactFlot id="product-charts" options={options} data={dataset} width="100%" height="200px" />
+        <ReactFlot id={this.state.id} options={options} data={dataset} width="100%" height="200px" />
       </div>
     );
   }

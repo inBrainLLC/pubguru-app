@@ -16,7 +16,7 @@ class Report extends Component {
   state = {
     data,
     selectedProp: "estimatedEuRevinew",
-    selectedCurrency: "USD"
+    selectedCurrency: "USD",
   };
 
   // convertCurrency = () => {
@@ -30,13 +30,23 @@ class Report extends Component {
           <div style={{ padding: 24, minHeight: 360 }}>
             <div>
               <Title />
-              <Toolbar />
-              <Overview />
+              <Toolbar
+                data={this.state.data}
+                selectedProp={this.state.selectedProp}
+                selectedCurrency={this.state.selectedCurrency}
+              />
+              <Overview
+                data={this.state.data}
+                selectedProp={this.state.selectedProp}
+              />
               <Chart
                 data={this.state.data}
                 selectedProp={this.state.selectedProp}
               />
-              <DetailTable data={this.state.data} />
+              <DetailTable
+                data={this.state.data}
+                selectedProp={this.state.selectedProp}
+              />
             </div>
           </div>
         </Content>

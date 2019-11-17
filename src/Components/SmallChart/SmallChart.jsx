@@ -1,63 +1,100 @@
-var FlotChart = React.createClass({
-  displayName: "FlotChart",
-  renderChart: function() {
-    var chartDiv = this.refs.chartDiv,
-      chartData = this.props.model,
-      chartOptions = this.props.options;
+import React, { Component } from "react";
+import ReactFlot from "react-flot";
+import '../../../node_modules/react-flot/flot/jquery.flot.time';
+import uuid from 'uuid';
 
-    jQuery(chartDiv)
-      .width(300)
-      .height(200);
-    jQuery.plot(chartDiv, chartData, chartOptions);
-  },
-  componentWillReceiveProps: function(nextProps) {
-    // called to see if the component is receiving props
-  },
-  shouldComponentUpdate: function(nextProps, nextState) {
-    // called to ask whether the component should be updated
-    return true;
-  },
-  componentDidMount: function() {
-    // called when the component is mounted
-    this.renderChart();
-  },
-  componentDidUpdate: function() {
-    // called after the props are updated
-    this.renderChart();
-  },
-  render: function() {
-    return React.DOM.div({
-      className: "flotChart",
-      ref: "chartDiv"
-    });
+class LargeChart extends Component {
+  state = {
+    id: uuid(),
   }
-});
 
-var chartOptions = {
-    series: {
-      bars: {
-        show: true,
-        barWidth: 0.3,
-        align: "center",
-        lineWidth: 0,
-        fill: 0.75
-      }
-    },
-    xaxis: {
-      ticks: [[0, "First"], [1, "Second"], [2, "Third"], [3, "Fourth"]],
-      mode: "categories",
-      tickLength: 0
-    },
-    yaxis: {
-      max: 10
+  getData = () => {
+    const { selectedProp, data } = this.props;
+    return data.map(d => [d.date, d[selectedProp]]);
+  };
+
+  getXDimensions = data => {
+    const xAxis = data.map(c => c[0]);
+    const max = Math.max(...xAxis);
+    const min = Math.min(...xAxis);
+    return {
+      mode: "time",
+      timeBase: "milliseconds",
+      timeformat: "%d %b",
+      max,
+      min,
     }
-  },
-  chartData = [[0, 4], [1, 6], [2, 3], [3, 8]];
+    // return { max, min };
+  }
 
-ReactDOM.render(
-  React.createElement(FlotChart, {
-    model: [chartData],
-    options: chartOptions
-  }),
-  document.getElementById("container")
-);
+  getYDimensions = data => {
+    const yAxis = data.map(c => c[1]);
+    const max = Math.max(...yAxis) * 1.20;
+    // const min = Math.min(...yAxis);
+    return { max, min: 0 };
+  }
+
+  render() {
+    const data = this.getData();
+
+    var dataset = [
+        { data: data, points: { symbol: "circle" } }, // color: #3fc0e8;
+    ];
+
+    const options = {
+      lines: {
+        show: true,
+        backgroundColor: { colors: ["#def4fb"] },
+        // fillColor: { colors: [ { opacity: 0.8 }, { opacity: 0.1 } ] },
+        show: true, 
+        fill: true,
+      },
+      points: {
+        radius: 3,
+        fill: true,
+        show: true
+      },
+      xaxis: {
+        mode: "time",
+        tickLength: 0,
+        ticks: [],
+        // timeBase: "milliseconds",
+        // timeformat: "%d %b",
+        // minTickSize: [1, "day"],
+        // autoScale: "none",
+        // axisLabelFontSizePixels: 12,
+        // axisLabelPadding: 10,
+        // ...this.getXDimensions(data),
+      },
+      yaxis: {
+        position: "left",
+        tickLength: 0,
+        ticks: [],
+        // axisLabel: "Change(%)",
+        // axisLabelUseCanvas: true,
+        // axisLabelPadding: 10,
+        ...this.getYDimensions(data),
+      },
+      legend: {
+        // noColumns: 0,
+        // labelBoxBorderColor: "#000000",
+        // position: "nw"
+      },
+      grid: {
+        hoverable: true,
+        clickable: true,
+        borderWidth: 1,
+        borderColor: "transparent",
+      },
+      colors: ["#38bee7"],
+    };
+
+    return (
+      <div>
+        <ReactFlot id={this.state.id} options={options} data={dataset} width="100%" height="100px" />
+      </div>
+    );
+  }
+}
+
+export default LargeChart;
