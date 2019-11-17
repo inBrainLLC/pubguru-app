@@ -58,49 +58,53 @@ class Overview extends Component {
                     />
                   </div>
                   <div className="overview-data-details">
-                    <Linebar previous={111150} current={80} />
+                    <Linebar previous={150} current={274.64} />
                     <Statistic value={274.64} precision={2} prefix="$" />
                   </div>
                 </div>
                 <SmallChart data={this.props.data} selectedProp={this.props.selectedProp} />
               </Col>
               <Col span={8}>
-                <div>
-                  <Tooltip title="Revenue earnd from Every 1,000 EU session">
-                    <Icon type="question-circle" />{' '}
-                  </Tooltip>
-                  <Statistic
-                    title="Estimated eu revenue"
-                    value={2}
-                    valueStyle={{ color: '#3f8600' }}
-                    prefix={<Icon type="arrow-up" />}
-                    suffix="%"
-                  />
-                  {/* {this.state.value == '+7' ? (
-                    <Linebar name={'$274.64'} value1={70} value2={50} />
-                  ) : (
-                      <Linebar name={'$100.64'} value1={60} value2={50} />
-                    )} */}
+                <div className="overview-data">
+                  <div className="overview-data-title">
+                    <div>
+                      <Tooltip title="Revenue earned from every 1000 EU sessions">
+                        <Icon type="question-circle" />{' '}EU Session RPM
+                      </Tooltip>
+                    </div>
+                    <Statistic
+                      value={2}
+                      valueStyle={{ color: '#3f8600' }}
+                      prefix={<Icon type="arrow-up" rotate={45} />}
+                      suffix="%"
+                    />
+                  </div>
+                  <div className="overview-data-details">
+                    <Linebar previous={1.10} current={1.33} />
+                    <Statistic value={1.33} precision={2} prefix="$" />
+                  </div>
                 </div>
                 <SmallChart data={this.props.data} selectedProp={this.props.selectedProp} />
               </Col>
               <Col span={8}>
-                <div>
-                  <Tooltip title="Revenue earnd from Every 1,000 EU pageview">
-                    <Icon type="question-circle" />{' '}
-                  </Tooltip>
-                  <Statistic
-                    title="Estimated eu revenue"
-                    value={8}
-                    valueStyle={{ color: '#3f8600' }}
-                    prefix={<Icon type="arrow-up" />}
-                    suffix="%"
-                  />
-                  {/* {this.state.value == '+7' ? (
-                    <Linebar name={'$274.64'} value1={70} value2={50} />
-                  ) : (
-                      <Linebar name={'$100.64'} value1={30} value2={50} />
-                    )} */}
+                <div className="overview-data">
+                  <div className="overview-data-title">
+                    <div>
+                      <Tooltip title="Revenue earned from every 1000 EU pageviews">
+                        <Icon type="question-circle" />{' '}EU Page RPM
+                      </Tooltip>
+                    </div>
+                    <Statistic
+                      value={8}
+                      valueStyle={{ color: '#3f8600' }}
+                      prefix={<Icon type="arrow-up" rotate={45} />}
+                      suffix="%"
+                    />
+                  </div>
+                  <div className="overview-data-details">
+                    <Linebar previous={1.00} current={1.26} />
+                    <Statistic value={1.26} precision={2} prefix="$" />
+                  </div>
                 </div>
                 <SmallChart data={this.props.data} selectedProp={this.props.selectedProp} />
               </Col>

@@ -332,9 +332,18 @@ h1 {
 
 .overview-data-details {
   display: flex;
+  align-items: center;
 }
 
 .linebar-container {
   display: flex;
   align-items: flex-end;
+}
+
+.overview-data-details .ant-statistic {
+  margin-left: 20px;
+}
+
+.overview-data-details .ant-statistic-content {
+  font-size: 50px;
 }
