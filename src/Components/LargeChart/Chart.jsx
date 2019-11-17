@@ -47,7 +47,7 @@ class DataChart extends Component {
 
   handleSubmetricChange = value => {
     this.setState({ selectedSubmetric: value });
-    // this.props.setSelectedMetric();
+    this.props.setSelectedMetric(value);
   };
 
   render() {
@@ -80,6 +80,7 @@ class DataChart extends Component {
           <Select
             style={{ width: 75, margin: '0 20px 0 10px' }}
             value={selectedCurrency}
+            onChange={this.handleCurrencyChange}
           >
             {currency.map(currency => (
               <Option key={currency.key}>{currency.value}</Option>
@@ -89,7 +90,7 @@ class DataChart extends Component {
         <Card style={{ borderRadius: '5px' }}>
           <LargeChart
             data={this.props.data}
-            selectedProp={this.props.selectedProp}
+            selectedMetric={this.props.selectedMetric}
           />
         </Card>
       </div>

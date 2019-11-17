@@ -48,6 +48,7 @@ class DetailTable extends Component {
           <span className="title">  Estimated Eu Revinew</span>
         </span>),
         dataIndex: 'estimatedEuRevinew',
+        sortOrder: this.props.selectedMetric === 'estimatedEuRevinew',
         sorter: (a, b) => a.estimatedEuRevinew.length - b.estimatedEuRevinew.length,
         sortDirections: ['descend', 'ascend'],
       },
@@ -62,6 +63,7 @@ class DetailTable extends Component {
             <span className="title">Non Eu Page views</span>
           </span>),
         dataIndex: 'nonEuPageviews',
+        sortOrder: this.props.selectedMetric === 'nonEuPageviews',
         sorter: (a, b) => a.nonEuPageviews.length - b.nonEuPageviews.length,
         sortDirections: ['descend', 'ascend'],
       },
@@ -75,6 +77,7 @@ class DetailTable extends Component {
           <span className="title">Priviously  Consented</span>
         </span>),
         dataIndex: 'priviouslyConsented',
+        sortOrder: this.props.selectedMetric === 'priviouslyConsented',
         sorter: (a, b) => a.priviouslyConsented.length - b.priviouslyConsented.length,
         sortDirections: ['descend', 'ascend'],
       },
@@ -89,6 +92,7 @@ class DetailTable extends Component {
             <span className="title"> Shown  And Consented</span>
           </span>),
         dataIndex: 'shownAndConsented',
+        sortOrder: this.props.selectedMetric === 'shownAndConsented',
         sorter: (a, b) => a.shownAndConsented.length - b.shownAndConsented.length,
         sortDirections: ['descend', 'ascend'],
       },
@@ -103,6 +107,7 @@ class DetailTable extends Component {
             <span className="title">Shown And Non Consented</span>
           </span>),
         dataIndex: 'shownAndNonConsented',
+        sortOrder: this.props.selectedMetric === 'shownAndNonConsented',
         sorter: (a, b) => a.shownAndNonConsented.length - b.shownAndNonConsented.length,
         sortDirections: ['descend', 'ascend'],
       },
@@ -117,6 +122,7 @@ class DetailTable extends Component {
             <span className="title">Gdpr Popup Ctr</span>
           </span>),
         dataIndex: 'gdprPopupCtr',
+        sortOrder: this.props.selectedMetric === 'gdprPopupCtr',
         sorter: (a, b) => a.gdprPopupCtr.length - b.gdprPopupCtr.length,
         sortDirections: ['descend', 'ascend'],
       },
@@ -133,6 +139,7 @@ class DetailTable extends Component {
 
   render() {
     const data = this.getData();
+    console.log(this.props.selectedMetric === 'estimatedEuRevinew');
     return (
       <Card style={{ margin: '40px 0', borderRadius: '5px' }} className="datatable">
         <Table
