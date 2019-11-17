@@ -292,7 +292,7 @@ h1 {
   background:#3FC0E8;
 
 }
-
+/* 
 .ant-statistic-title {
   margin-bottom: 4px;
   color: rgba(0, 0, 0, 0.45);
@@ -313,4 +313,28 @@ h1 {
   -webkit-font-feature-settings: 'tnum', "tnum";
   font-feature-settings: 'tnum', "tnum";
   width: 223px;
+} */
+
+.overview-data {
+  min-height: 100px;
+}
+
+.overview-data-title .ant-statistic-content {
+  font-size: 13px;
+}
+
+.overview-data-title {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 13px;
+  align-items: center;
+}
+
+.overview-data-details {
+  display: flex;
+}
+
+.linebar-container {
+  display: flex;
+  align-items: flex-end;
 }

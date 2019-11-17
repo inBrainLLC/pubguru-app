@@ -1,23 +1,39 @@
 import React, { Component } from "react";
 
 class Linebar extends Component {
+  getCoefficients = () => {
+    const { previous, current } = this.props;
+    const isNewLarger = current > previous;
 
+    const prevCoeff = isNewLarger ? previous / current : 1;
+    const currCoeff = !isNewLarger ? current / previous : 1;
+
+    return {
+      prev: Math.max(prevCoeff, 0.5),
+      curr: Math.max(currCoeff, 0.5),
+    }
+  }
 
   render() {
+    const { prev, curr } = this.getCoefficients();
     return (
-
-        <div>
-          <div class='wrapper'>
-
-            <div class="vl1" style={{height: this.props.value1+"px",  background:'gray',
-  float: 'left'}}></div>
-             <div class="vl2" style={{height: this.props.value2+"px",  background:'#3FC0E8',
-  float: 'left'}}></div>
-         {this.props.name}
-         </div>
-
-        </div>
-      
+      <div className="linebar-container">
+          <div
+            style={{ 
+              height: 50 * prev,
+              width: 20 * prev,
+              background: '#b0b9bf',
+            }}
+          ></div>
+          <div
+            style={{
+              height: 50 * curr,
+              width: 20 * curr,
+              background: '#3FC0E8',
+              marginLeft: 2,
+            }}
+          ></div>
+      </div>
     );
   }
 }
