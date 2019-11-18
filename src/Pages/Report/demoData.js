@@ -83,6 +83,7 @@ const data = [
         shownAndNonConsented: 4384,
         gdprPopupCtr: 0.1,
     }
+    
 ];
 
 export default data;
