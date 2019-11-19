@@ -44,9 +44,9 @@ class LargeChart extends Component {
     const options = {
       lines: {
         show: true,
-        show: true, 
         fill: true,
         lineWidth: 1,
+        fillColor: "#38bee722",
       },
       points: {
         radius: 2,
@@ -72,7 +72,8 @@ class LargeChart extends Component {
         borderWidth: 1,
         borderColor: "transparent",
       },
-      colors: ["#38bee7"],
+      colors: ['#38bee7'],
+      backgroundOpacity: 0.5,
       shadowSize: 0,
     };
 

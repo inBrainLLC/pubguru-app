@@ -146,7 +146,7 @@ class DetailTable extends Component {
           columns={this.getColumns()}
           dataSource={data}
           onChange={this.onSelect}  footer={() => 'Total'}
-
+          pagination={false}
           />
       </Card>
     )

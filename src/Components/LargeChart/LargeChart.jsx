@@ -80,7 +80,7 @@ class LargeChart extends Component {
     };
 
     return (
-      <div>
+      <div className="large-chart">
         <ReactFlot id={this.state.id} options={options} data={dataset} width="100%" height="200px" />
       </div>
     );

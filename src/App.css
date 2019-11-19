@@ -354,3 +354,7 @@ h1 {
 .overview-data-details .ant-statistic-content {
   font-size: 50px;
 }
+
+.large-chart .legendColorBox div {
+  border-radius: 50%;
+}
